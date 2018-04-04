@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nackademin.foureverhh.mapslocationyoutube_18404">
+    <!--Allow usage of GPS-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--Allow usage of NETWORK-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--Allow to write data to external storage-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--To make only this app can get the google map api-->
+    <permission android:name="com.nackademin.foureverhh.mapslocationyoutube_18404.permission.MAPS_RECEIVE"
+        android:protectionLevel = "signature"/>
+    <!--To implement the permission-->
+    <uses-permission android:name="com.nackademin.foureverhh.mapslocationyoutube_18404.permission.MAPS_RECEIVE"/>
+    <!--To get google service from server-->
+    <uses-permission android:name="android.google.android.providers.gsf.permissions.READ_GSERVICES"/>
+    <!--Allow app to use OpenGL ES 2.0-->
+    <uses-feature android:glEsVersion="0x00020000"
+        android:required="true"/>
 
     <application
         android:allowBackup="true"
